@@ -1,0 +1,31 @@
+* {
+    font-size: 30px;
+}
+
+span {
+    color: red;
+}
+
+#sbject {
+    color: blue !important;
+}
+
+#sbject {
+    color: burlywood;
+}
+
+.content {
+    color: pink;
+}
+/* 캐스케이딩 예시 */
+.content {
+    color: brown;
+}
+
+h1, 
+p, 
+span {
+    background-color: aqua;
+}
+
+
