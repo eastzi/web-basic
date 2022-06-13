@@ -17,7 +17,7 @@ span {
 .content {
     color: pink;
 }
-/* 캐스케이딩 예시 */
+/* 캐스케이딩(위에서 아래로 계단식 적용) 예시 */
 .content {
     color: brown;
 }
