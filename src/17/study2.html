@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box" src="aaaaa">1</div>
+
+    <script> //document == html
+        const box1 = document.querySelector("#box");
+
+        //box1.style.backgroundColor = "red";
+        console.log(box1.style.backgroundColor); //처음에는 색이 없어서 두번클릭해야 블랙이 인식되는 문제
+        box1.onclick = () => {                   //==> "" 비어있어도 레드로 바꿔라는 || 를 써서 조건 추가   
+            if(box1.style.backgroundColor == "black" || box1.style.backgroundColor == ""){ 
+                box1.style.backgroundColor = "red";
+            }else {
+                box1.style.backgroundColor = "black";
+            }
+        }
+    </script>
+</body>
+
+</html>

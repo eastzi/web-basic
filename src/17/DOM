@@ -1,0 +1,7 @@
+DOM = document object model
+HTML = DOM
+노드 - dom트리에서 가지가 갈라져 나간 항목.
+기능 - element , 속성 - attribute
+---------------------------------------------
+dom에 접근 - getElementById/Class/Tag
+querySelector/SelectorAll

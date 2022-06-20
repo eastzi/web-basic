@@ -11,18 +11,45 @@
     }
   </style>
 </head>
+
 <body>
+
   <div id="container">
-    <img src="images/cup-1.png" id="cup">		
+    <img src="images/cup-1.png" class="cup">		
+    <img src="images/cup-1.png" class="cup">		
   </div>
 
 	<script>
-		var cup = document.querySelector("#cup");  // id = cup인 요소를 가져옴
-    cup.onclick = changePic;  // cup을 클릭하면 changePic 함수 실행
+		var cup = document.querySelectorAll(".cup");  // id = cup인 요소를 가져옴, 제일 처음나온 것 하나만 가져옴.(퀴리셀렉터)
+    cup[1].onclick = changePic;  // cup을 클릭하면 changePic 함수 실행
+    //changePic; = changePic(); 과 동일
 
     function changePic() {
-      cup.src = "images/cup-2.png";
+      if(cup[1].getAttribute("src") == "images/cup-1.png"){
+        cup[1].src = "images/cup-2.png";
+      }else {
+        cup[1].src = "images/cup-1.png";
+      }
 		}
+
+    // function changePic() {
+    //   if(cup.src.includes("cup-1")){
+    //     cup.src = "images/cup-2.png";
+    //   }else {
+    //     cup.src = "images/cup-1.png";
+    //   }
+		// }
+
+    //익명함수
+    // cup.onclick = function () {
+    //   cup.src = "images/cup-2.png";
+    // }
+
+    //화살표함수
+    // cup.onclick = () => {
+    //   cup.src = "images/cup-2.png";
+    // }
 	</script>
+
 </body>
 </html>
