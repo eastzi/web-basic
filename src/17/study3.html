@@ -18,22 +18,22 @@
         const container = document.querySelector("#container");
         const btn = document.querySelector(".btn");
         const rBtn = document.querySelector(".r-btn");
+        
+        rBtn.onclick = () => {
+            const remove = document.querySelector(".remove");
+            remove.parentNode.removeChild(remove);
+        }
 
         btn.onclick = () => {
+            //요소생성
             const div1 = document.createElement("div");
             const h1 = document.createElement("h1");
             const p = document.createElement("p");
-            // 요소노드
             const input1 = document.createElement("input");
-
-            rBtn.onclick = () => {
-                const remove = document.querySelector(".remove");
-                remove.parentNode.removeChild(remove);
-            }
 
             const text1 = document.createTextNode("Dom 노드 study");
             const text2 = document.createTextNode("안녕하세요. javascript 수업입니다.");
-            // 요소노드
+            // 새로운 속성노드 생성 create <-> set
             const pass = document.createAttribute("type");
             
             h1.appendChild(text1);
@@ -46,7 +46,7 @@
             div1.appendChild(input1);
             container.appendChild(div1);
 
-            // 요소노드
+            // 이미 존재하는 요소 노드에 속성노드 생성하고자 할때 set
             input1.setAttributeNode(pass);
 
         }
